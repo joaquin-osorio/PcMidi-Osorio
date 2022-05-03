@@ -1,0 +1,38 @@
+.opButton{
+    background: none;
+    border: none;
+    color: rgb(0, 139, 139);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+input{
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.inputContainer{
+    box-shadow: 5px 5px 10px rgb(187, 187, 187);
+    display: inline-flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.cartButton{
+    margin: 10px;
+    background: none;
+    border: 1px solid rgb(0, 139, 139);
+    color: rgb(0, 139, 139);
+    border-radius: 7px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.itemCountContainer{
+    display: flex;
+    flex-direction: column;
+}
