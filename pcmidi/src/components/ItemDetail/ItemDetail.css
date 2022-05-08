@@ -1,0 +1,28 @@
+.ItemDetailBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.ItemDetailBox img{
+    width: 600px;
+    padding: 50px;
+}
+
+.derecha{
+    padding: 50px;
+}
+
+.derecha h1{
+    font-weight: 500;
+}
+
+.derecha p{
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-top: 50px !important;
+}
