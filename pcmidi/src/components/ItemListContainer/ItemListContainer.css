@@ -1,4 +1,5 @@
-p{
-    font-weight: 700;
-    font-size: 2rem;
+.itemListContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
