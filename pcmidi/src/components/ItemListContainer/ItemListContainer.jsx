@@ -11,7 +11,6 @@ const ItemListContainer = (props) => {
 
     useEffect (() => {
         //Callback Function
-        console.log(id);
         getData
             .then(res => {
                 setProducts(id ? res.filter(prod => prod.catId == id) : res);

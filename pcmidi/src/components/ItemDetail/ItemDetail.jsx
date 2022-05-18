@@ -2,16 +2,26 @@ import React, {useState} from 'react';
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom'
+import { useContext } from 'react';
+import cartContext from '../../services/cartContext';
 
 
-const ItemDetail = ({ title, pictureURL, price, description }) => {
 
+const ItemDetail = ({ item, title, pictureURL, price, description }) => {
+    
+    const cartCtx = useContext(cartContext);
     const [quantity, setQuantity] = useState(null);
 
     const addHandler = quantityToAdd => {
         setQuantity(quantityToAdd);
-        console.log(quantityToAdd);
+
+        if(!cartCtx.isInCart(item.id)){
+            cartCtx.addProduct(item, quantityToAdd);
+        } else{
+            alert('Este producto ya se encuentra en el carrito');
+        }
     }
+
 
     return (
         <div className="ItemDetailBox">
@@ -23,9 +33,7 @@ const ItemDetail = ({ title, pictureURL, price, description }) => {
                 <p className="description">{description}</p>
                 {
                     quantity ? <Link to={'/cart'} className='buyButton'>Continuar con la compra</Link> : <ItemCount className="itemCount" initial={1} stock={10} onAdd={addHandler} />
-                }
-                
-                
+                }             
             </div>
         </div>
 
